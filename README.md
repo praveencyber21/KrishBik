@@ -50,5 +50,5 @@ The application will be accessible at **http://localhost:3500**.
 ## Contributing
   Contributions are welcome! If you find any bugs or want to improve the application, feel free to open an issue or submit a pull request.
 
-License
-This project is licensed under the <null>.
+## License
+This project is licensed under the MIT License.
