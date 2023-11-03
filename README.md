@@ -17,6 +17,7 @@ Make sure to set up your MySQL database with the following details:
 - **User:** `praveen404`
 - **Password:** `praveen_404`
 - **Database Name:** `cartrabbit`
+- **Note:** Please use admin email and password as '**email: admin@gmail.com**', '**password: admin**'
 
 ## Installation
 
