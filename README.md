@@ -37,9 +37,11 @@ The application will be accessible at **http://localhost:3500**.
 
 * Visit the registration page and create an account.
 * Provide necessary details and verify your email address.
+  
 **2.User Login:**
 
 * Log in to your account using your credentials.
+  
 **3.Service Booking:**
   
 * Navigate to the booking page.
