@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 ##  Run the application:
 
  - **node server.js**
-The application will be accessible at **http://localhost:3500**.
+* The application will be accessible at **http://localhost:3500**.
 
 ## Usage
 **1.User Registration:**
