@@ -30,31 +30,32 @@ Make sure to set up your MySQL database with the following details:
 - **Note:** Please use admin email and password as '**email: admin@gmail.com**', '**password: admin**'
   
 **database schema for the **cartrabbit** database **
--`**users` Table:**
-1. email (Primary Key)
-2. user_name
-3. mobile
-4. password
--**`bookings` Table:**
-1. id (Primary Key)
-2. email (Foreign Key referencing users.email)
-3. bike
-4. service
-5. status
+`**users` Table:**
+* email (Primary Key)
+* user_name
+* mobile
+* password
+   
+**`bookings` Table:**
+* id (Primary Key)
+* email (Foreign Key referencing users.email)
+* bike
+* service
+* status
 
 **Here's a breakdown of each table's schema:**
 
 **users Table:**
--**email:** Primary key, unique identifier for each user.
--**user_name:** The name of the user.
--**mobile:** The mobile number of the user.
--**password:** The password associated with the user's account.
-**bookings Table:**
--**id:** Primary key, unique identifier for each booking.
--**email:** Foreign key referencing the users.email column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
--**bike:** Information related to the booked bike.
--**service:** Details about the service being booked.
--**status:** The status of the booking, indicating whether it's confirmed, pending, etc.
+* **email:** Primary key, unique identifier for each user.
+* **user_name:** The name of the user.
+* **mobile:** The mobile number of the user.
+* **password:** The password associated with the user's account.
+* **bookings Table:**
+* **id:** Primary key, unique identifier for each booking.
+* **email:** Foreign key referencing the users.email column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
+* **bike:** Information related to the booked bike.
+* **service:** Details about the service being booked.
+* **status:** The status of the booking, indicating whether it's confirmed, pending, etc.
 
 ## Installation
 
