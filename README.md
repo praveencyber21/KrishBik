@@ -7,7 +7,14 @@
 - **Frontend:** HTML, CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MySQL
-- **Dependencies:** Express, Bcrypt, MySQL
+- **Dependencies:** 
+- bcrypt: ^5.1.1
+- cookie-parser: ^1.4.6
+- express: ^4.18.2
+- express-session: ^1.17.3
+- mysql: ^2.18.1
+- nodemailer: ^6.9.7
+- uuid: ^9.0.1
 
 ## Database Configuration
 
