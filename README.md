@@ -103,7 +103,19 @@ To run this project locally, follow these steps:
 * Mark a booking as ready for delivery.
 * Mark a booking as completed.
 * Receive an email whenever a booking is made.
-  
+
+## Screenshots
+* **Home page**
+![Home](https://github.com/praveencyber21/KrishBik/assets/126045728/101e9146-38e9-40ab-9a6f-26b632a456a5)
+* **Register page**
+![Register](https://github.com/praveencyber21/KrishBik/assets/126045728/800bef4a-7e1f-4f77-99a1-04a3f0086a5d)
+* **User page**
+![User](https://github.com/praveencyber21/KrishBik/assets/126045728/e6b9a548-b88f-4a58-b863-adf99534b15a)
+* **Booking page**
+![Booking](https://github.com/praveencyber21/KrishBik/assets/126045728/193712aa-b056-4949-b98a-be22ca0b9231)
+* **Admin page**
+![Admin](https://github.com/praveencyber21/KrishBik/assets/126045728/61ca0c41-b265-4ef8-8bc6-129b6a71f6f4)
+
 ## Contributing
   Contributions are welcome! If you find any bugs or want to improve the application, feel free to open an issue or submit a pull request.
 
