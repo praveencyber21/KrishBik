@@ -69,7 +69,7 @@ To run this project locally, follow these steps:
 
 ##  Run the application:
 
- - **node server**
+`node server`
 * The application will be accessible at `http://localhost:3500`.
 
 ##  User usage
