@@ -8,14 +8,16 @@
 - **Backend:** Node.js, Express.js
 - **Database:** MySQL
 - **Dependencies:** 
-    bcrypt: ^5.1.1
-    cookie-parser: ^1.4.6
-    express: ^4.18.2
-    express-session: ^1.17.3
-    mysql: ^2.18.1
-    nodemailer: ^6.9.7
-    uuid: ^9.0.1
+ 
+- This project relies on the following dependencies:
 
+**bcrypt:** Version 5.1.1
+**cookie-parser:** Version 1.4.6
+**express: Version** 4.18.2
+**express-session:** Version 1.17.3
+**mysql:** Version 2.18.1
+**nodemailer:** Version 6.9.7
+**uuid:** Version 9.0.1
 ## Database Configuration
 
 Make sure to set up your MySQL database with the following details:
