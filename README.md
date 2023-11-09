@@ -11,13 +11,14 @@
  
 - This project relies on the following dependencies:
 
-**bcrypt:** Version 5.1.1
-**cookie-parser:** Version 1.4.6
-**express: Version** 4.18.2
-**express-session:** Version 1.17.3
-**mysql:** Version 2.18.1
-**nodemailer:** Version 6.9.7
-**uuid:** Version 9.0.1
+**1. bcrypt:** Version 5.1.1
+**2. cookie-parser:** Version 1.4.6
+**3. express: Version** 4.18.2
+**4. express-session:** Version 1.17.3
+**5. mysql:** Version 2.18.1
+**6. nodemailer:** Version 6.9.7
+**7. uuid:** Version 9.0.1
+
 ## Database Configuration
 
 Make sure to set up your MySQL database with the following details:
@@ -27,6 +28,33 @@ Make sure to set up your MySQL database with the following details:
 - **Password:** `praveen_404`
 - **Database Name:** `cartrabbit`
 - **Note:** Please use admin email and password as '**email: admin@gmail.com**', '**password: admin**'
+  
+**database schema for the **cartrabbit** database **
+-`**users` Table:**
+1. email (Primary Key)
+2. user_name
+3. mobile
+4. password
+-**`bookings` Table:**
+1. id (Primary Key)
+2. email (Foreign Key referencing users.email)
+3. bike
+4. service
+5. status
+
+**Here's a breakdown of each table's schema:**
+
+**users Table:**
+-**email:** Primary key, unique identifier for each user.
+-**user_name:** The name of the user.
+-**mobile:** The mobile number of the user.
+-**password:** The password associated with the user's account.
+**bookings Table:**
+-**id:** Primary key, unique identifier for each booking.
+-**email:** Foreign key referencing the users.email column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
+-**bike:** Information related to the booked bike.
+-**service:** Details about the service being booked.
+-**status:** The status of the booking, indicating whether it's confirmed, pending, etc.
 
 ## Installation
 
@@ -34,19 +62,19 @@ To run this project locally, follow these steps:
 
 1. Clone the repository: `https://github.com/praveencyber21/KrishBik.git`
 2. Navigate to the project directory: `cd KrishBik`
-3. Install dependencies: `npm install express bcrypt mysql `
-4. Start the server: `node server.js`
+3. Install dependencies: `npm install express bcrypt mysql nodemailer cookie-parser express-session uuid`
+4. Start the server: `node server`
 
 ##  Run the application:
 
- - **node server.js**
+ - **node server**
 * The application will be accessible at **http://localhost:3500**.
 
-## Usage
+##  User usage
 **1.User Registration:**
 
 * Visit the registration page and create an account.
-* Provide necessary details and verify your email address.
+* Provide necessary details and your email address.
   
 **2.User Login:**
 
@@ -56,6 +84,23 @@ To run this project locally, follow these steps:
   
 * Navigate to the booking page.
 * Select the type of service required, preferred date, and time.
+
+**4.User access:**
+
+* See the status of his booking.
+* Receive an email as soon as his booking is ready for delivery.
+  
+##  Admin usage
+**1. Admin login:**
+
+* Log in to admin account using admin credentials.
+
+**2. Admin access:**
+
+* View a list of all bookings (pendings, ready for delivery and completed).
+* Mark a booking as ready for delivery.
+* Mark a booking as completed.
+* Receive an email whenever a booking is made.
   
 ## Contributing
   Contributions are welcome! If you find any bugs or want to improve the application, feel free to open an issue or submit a pull request.
