@@ -9,15 +9,15 @@
 - **Database:** MySQL
 - **Dependencies:** 
  
-- This project relies on the following dependencies:
+**This project relies on the following dependencies:**
 
-**1. bcrypt:** Version 5.1.1
-**2. cookie-parser:** Version 1.4.6
-**3. express: Version** 4.18.2
-**4. express-session:** Version 1.17.3
-**5. mysql:** Version 2.18.1
-**6. nodemailer:** Version 6.9.7
-**7. uuid:** Version 9.0.1
+* **bcrypt:** Version 5.1.1
+* **cookie-parser:** Version 1.4.6
+* **express: Version** 4.18.2
+* **express-session:** Version 1.17.3
+* **mysql:** Version 2.18.1
+* **nodemailer:** Version 6.9.7
+* **uuid:** Version 9.0.1
 
 ## Database Configuration
 
@@ -27,7 +27,7 @@ Make sure to set up your MySQL database with the following details:
 - **User:** `praveen404`
 - **Password:** `praveen_404`
 - **Database Name:** `cartrabbit`
-- **Note:** Please use admin email and password as '**email: admin@gmail.com**', '**password: admin**'
+- **Note:** Please use admin email and password as **email:** `admin@gmail.com`, **password:** `admin`'
   
 **database schema for the **cartrabbit** database **
 `**users` Table:**
@@ -38,7 +38,7 @@ Make sure to set up your MySQL database with the following details:
    
 **`bookings` Table:**
 * id (Primary Key)
-* email (Foreign Key referencing users.email)
+* email (Foreign Key referencing **users.email**)
 * bike
 * service
 * status
@@ -52,7 +52,7 @@ Make sure to set up your MySQL database with the following details:
 * **password:** The password associated with the user's account.
 * **bookings Table:**
 * **id:** Primary key, unique identifier for each booking.
-* **email:** Foreign key referencing the users.email column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
+* **email:** Foreign key referencing the **users.email** column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
 * **bike:** Information related to the booked bike.
 * **service:** Details about the service being booked.
 * **status:** The status of the booking, indicating whether it's confirmed, pending, etc.
@@ -69,7 +69,7 @@ To run this project locally, follow these steps:
 ##  Run the application:
 
  - **node server**
-* The application will be accessible at **http://localhost:3500**.
+* The application will be accessible at `http://localhost:3500`.
 
 ##  User usage
 **1.User Registration:**
