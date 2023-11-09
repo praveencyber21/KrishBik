@@ -29,10 +29,10 @@ Make sure to set up your MySQL database with the following details:
 - **Database Name:** `cartrabbit`
 - **Note:** Please use admin email and password as **email:** `admin@gmail.com`, **password:** `admin`'
   
-**database schema for the **cartrabbit** database **
+**database schema for the cartrabbit database**
 `**users` Table:**
 * email (Primary Key)
-* user_name
+* name
 * mobile
 * password
    
@@ -47,10 +47,11 @@ Make sure to set up your MySQL database with the following details:
 
 **users Table:**
 * **email:** Primary key, unique identifier for each user.
-* **user_name:** The name of the user.
+* **name:** The name of the user.
 * **mobile:** The mobile number of the user.
 * **password:** The password associated with the user's account.
-* **bookings Table:**
+  
+**bookings Table:**
 * **id:** Primary key, unique identifier for each booking.
 * **email:** Foreign key referencing the **users.email** column, establishing a relationship between bookings and users. It represents the email of the user who made the booking.
 * **bike:** Information related to the booked bike.
