@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+/* User Page style */
+.home{
+    width:100%;
+    background: linear-gradient(to top,rgb(0, 0, 0,.8)50%, rgb(0, 0, 0,.8)50%), url(Royal.jpg);
+    background-position: center;
+    background-size: cover;
+    height:109vh;
+}
+/* Header */
+.nav{
+    width:100%;
+    height:75px;
+    margin:auto;
+}
+/* Logo */
+.logo{
+    color: white;
+    font-family: 'Montserrat Alternates';
+    font-size: 35px;
+    margin: auto;
+    padding-left: 40px;
+    padding-top: 20px;
+    float:left;
+    font-weight: 600;
+}
+.highlight{
+    color:#ff7200;
+}
+/* Header menu list */
+.menu{
+    color:white;
+    width: 400px;
+    height:70px;
+    position: relative;
+    left: 250px;
+    margin: auto;
+}
+ul{
+    float:left;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+ul li a{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+/* header icon */
+.material-symbols-outlined{
+  
+    transform: translateY(-3.7vh);
+    margin-left: 75px;   
+}
+
+.booking-box{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    background:rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: white;
+    top: 150px;
+    left: 25%;
+    padding: 10px;
+}
+/* Booking head */
+.booking-box h2{
+    color: #ff7200;
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Menu box label (bike, service) */
+.menu-box label{
+    color: white;
+    font-size: 25px;
+    
+}
+/* Menu box */
+.menu-box select{
+    margin-top: 5%;
+    color: grey;
+    font-size: 25px;
+    background: transparent;
+    border-radius: 50px;
+    border-color: gray;
+}
+.menu-box select:focus{
+    border-color: #ff7200;
+    outline: none;   
+}
+.menu-box .input input{
+    color: #ff7200;
+    
+    width: 60%;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid white;
+    background: transparent;
+}
+#dateandtime{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    text-align: center;
+}
+#dateandtime label{
+    color:#ff7200;
+}
+#dateandtime input{
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 40%;
+    height: 30px;
+    font-size: 23px;
+    border-radius: 50px;
+    color: #ff7200;
+    border: none;
+    outline: none;
+}
+#dateandtime input:focus{
+    border-color: #ff7200;
+
+}
+#bookNowButton button{
+    width:30%;
+    height: 40px;
+    margin-left: 33%;
+    margin-top: 20px;
+    background-color: #ff7200;
+    font-size: 20px;
+    color: white;
+    font-weight:600;
+    border-radius: 50px;
+
+}

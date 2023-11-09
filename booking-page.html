@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking-style.css">
+
+    <!-- Login Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Montserrat Alternates font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>BOOK</title>
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="home">
+       <header>
+            <!-- Navbar  -->
+            <div class="nav">
+                <!-- Logo -->
+                <div class="logo">
+                    <p><span class="highlight">K</span>rish<span class="highlight">B</span>ik</p>
+                </div>
+
+                <!-- Header menu list -->
+                <div class="menu">
+                    <ul>
+                        <!-- Home -->
+                        <li><a href="user-home-page.html">Home<span class="material-symbols-outlined">
+                            home</a></li>
+                        
+                            </span>
+                            <!-- Contact -->
+                        <li><a href="">Contact<span class="material-symbols-outlined">
+                            call
+                           </span></a></li>
+                            <!-- Logout -->
+                            <li><a href="index.html">Logout<span class="material-symbols-outlined">
+                                logout
+                                </span></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </header>
+        
+            <div class="booking-box">
+                <h2>Welcome to KrishBik</h2>
+                
+                <form action="/booknow" id="booknowform" method="POST">
+                    <div class="menu-box">
+                        <!-- Bike names -->
+                        <label for="bikes">Bike: </label>
+                        <select name="bikes" id="bikes">
+                            <option value="hero">Hero</option>
+                            <option value="bajajpulser">Bajaj Pulser</option>
+                            <option value="splender">Splender</option>
+                            <option value="royal">Royal enfield</option>
+                            <option value="ktm">KTM</option>
+                            <option value="others">Others</option>
+                    </select>
+                        <!-- Services -->
+                        <label for="services">Service: </label>
+                        <select name="services" id="services">
+                            <option value="general">General</option>
+                            <option value="oil">Oil check/change</option>
+                            <option value="waterwash">Water wash</option>
+                    </select>
+                    <div class="input">
+                        <label for="email">Enter your email: </label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    
+                   <div id="dateandtime">
+                    <label for="datetime">Select your golden date and time:</label>
+                   
+                    <input type="datetime-local" id="datetime" name="datetime" >
+                   </div>
+                   
+        
+                    <div id="bookNowButton">
+                        <button type="submit">Book now</button>
+                    </div>
+                </div>
+                </form>
+    </div>
+</body>
+</html>

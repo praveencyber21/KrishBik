@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+/* Admin Page style */
+.home{
+
+    width:100%;
+    background: linear-gradient(to top,rgb(0, 0, 0,.8)50%, rgb(0, 0, 0,.8)50%), url(Royal.jpg);
+    background-position: center;
+    background-size: cover;
+    height:109vh;
+}
+/* Dashboard side left */
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 40vh;
+    background:rgba(255, 255, 255, 0.1);
+    /* box-shadow:1px 1px 1px rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(10px); 
+    border-radius: 2px;
+    
+}
+/* Logo */
+.logo{
+    color: white;
+    font-family: 'Montserrat Alternates';
+    font-size: 35px;
+    margin: auto; 
+    padding-left: 40px; 
+    padding-top: 20px;
+    float:left;
+    font-weight: 600;
+}
+.highlight{
+    color:#ff7200;
+}
+/* Side bar list */
+ul{
+   position: absolute;
+   top: 100px;
+}
+ul li{
+    margin-top: 25px;
+    padding: 20px;
+    margin-left: 5px;
+    list-style: none;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+
+}
+ul li i{
+    font-size: 30px;
+    font-weight: 600;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+/* sidebar icon */
+.material-symbols-outlined{
+  
+    transform: translateY(50%);
+    margin-left: 10px;
+    
+}
+/* Body card */
+.main-cards{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 20px 0;
+    margin-top: -100vh;
+    margin-left: 45vh;
+}
+#pending-count{
+    font-size: 30px;
+    font-weight: 600;
+}
+#ready-count{
+    font-size: 30px;
+    font-weight: 600;
+}
+#completed-count{
+    font-size: 30px;
+    font-weight: 600;
+}
+.card{
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 50px;
+    text-align: center;
+    width: 40vh;
+    height: 20vh;
+    
+}
+.card-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h3{ 
+    font-size: 30px;
+}
+.card:first-child{
+    background-color: blueviolet;
+}
+.card:nth-child(2){
+    background-color: red;
+}
+.card:nth-child(3){
+    background-color: green;
+}
+.card-inner .material-symbols-outlined{
+    font-size: 30px;
+    color: white;
+    margin-top: -30px;
+}
+/* All status */
+#all-status-table{
+    table-layout: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color:white;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    border-radius: 50px;
+}
+/* Pending table  */
+#pending-bookings-table{
+    table-layout: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color:white;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    border-radius: 50px;
+}
+
+/* Ready table */
+#ready-bookings-table{
+    table-layout: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color:white;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    border-radius: 50px;
+}
+
+#completed-bookings-table{
+    table-layout: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color:white;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    border-radius: 50px;
+}
+
+
+table, tr, td{
+    padding: 1rem;
+    font-size: 18px;
+}
+
+
+

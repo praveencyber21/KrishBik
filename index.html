@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Login Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Montserrat Alternates font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>HOME</title>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="home">
+        <header>
+            <!-- Navigation bar -->
+            <div class="nav">
+                <!-- Logo -->
+                <div class="logo">
+                    <p><span class="highlight">K</span>rish<span class="highlight">B</span>ik</p>
+                </div>
+                <!-- Header menu list -->
+                <div class="menu">
+                    <ul>
+                        <!-- Home -->
+                        <li><a href="index.html">Home</a></li>
+                        <span class="material-symbols-outlined">
+                            home
+                            </span>
+                        <!-- Services -->
+                        <li><a href="">Services</a></li>
+                        <span class="material-symbols-outlined">
+                            construction
+                            </span>
+                        <!-- Feedback -->
+                        <li><a href="">Feedback</a></li>
+                        <span class="material-symbols-outlined">
+                            rate_review
+                            </span>
+                           <!-- Contact -->
+                        <li><a href="">Contact</a></li>
+                        <span class="material-symbols-outlined">
+                            call
+                            </span>
+                    </ul>
+                </div>
+                
+            </div>
+        </header>
+
+        <!-- Body contents -->
+        <div class="content">
+            <!-- Title "Bike Repair" -->
+            <div class="repair">
+                <h1><span class="highlight">B</span>ike<br><span class="highlight">Re</span>pair</h1>
+            </div>
+            <!-- Quote  -->
+            <div class="quote">
+                <p>We don't use want you to love riding your bike,<br>
+                    we want you to love working on your bike too.<br>
+                    We are here to help you.
+                </p>
+        </div>
+
+        <!-- Login Form -->
+        <form action="/login" method="POST">
+            <div class="login">
+                <h2>Login</h2>
+
+                <!-- Email -->
+                <div class="login-input-box">
+                    
+                    <input type="text" name="email" id="email" placeholder="Enter Your Email id"
+                    required>
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+
+                <!-- Password -->
+                <div class="login-input-box">
+                   
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                    required>
+                    <i class='bx bxs-lock-alt'></i>
+                  
+                </div>
+
+                <!-- Submit button -->
+                <div class="btn">
+                    <button type="submit"> Submit</button>
+                </div>
+
+                <!-- Forget Password -->
+                <div id="forgetpassword">
+                    <a href="">Forget Password?</a>
+                </div>
+
+                <!-- Registration Form -->
+                <div id="register">
+                    <p>Don't have an account?</p>
+                    <a href="register.html">Register</a>
+                </div>
+                
+    
+            </div>
+        </form>
+         
+
+    </div>
+
+</body>
+</html>

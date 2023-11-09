@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+/* User Page style */
+.home{
+    width:100%;
+    background: linear-gradient(to top,rgb(0, 0, 0,.8)50%, rgb(0, 0, 0,.8)50%), url(Royal.jpg);
+    background-position: center;
+    background-size: cover;
+    height:109vh;
+}
+/* Header */
+.nav{
+    width:100%;
+    height:75px;
+    margin:auto;
+}
+/* Logo */
+.logo{
+    color: white;
+    font-family: 'Montserrat Alternates';
+    font-size: 35px;
+    margin: auto;
+    padding-left: 40px;
+    padding-top: 20px;
+    float:left;
+    font-weight: 600;
+}
+/* Header menu list */
+.menu{
+    color:white;
+    width: 400px;
+    height:70px;
+    position: relative;
+    left: 250px;
+    margin: auto;
+}
+ul{
+    float:left;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+ul li a{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+/* header icon */
+.material-symbols-outlined{
+    transform: translateY(-3.7vh);
+    margin-left: 75px;   
+}
+
+/* Body content */
+.main-content{
+    color: white;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 10vh;
+}
+ /* Title "This is awesome looking bike" */
+.title{
+    font-size: 30px;
+}
+/* Quote "There is no tommorrow" */
+.body-quote{
+    color: gray;
+    font-size: 25px;
+}
+.highlight{
+    color:#ff7200;
+}
+/* Welcome box */
+.welcome{
+    position:absolute;
+    top: -5%;
+    left: 110%;
+    width: 150%;
+    height: 180%;
+    background:rgba(255, 255, 255, 0.1);
+    box-shadow:1px 1px 2px rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    text-align: center; 
+}
+/* Welcome */
+.welcome-text h1{
+    font-size: 80px;
+    color: #ff7200;
+}
+/* to our company  */
+.welcome-text h2{
+    font-size: 30px;
+    position: relative;
+    margin-top: -30px;
+    
+}
+/* Welcome user name */
+.welcome-text h3{
+    font-size: 50px;
+    color: #ff7200;
+}
+#status-container{
+    color: gray;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 100px;
+}
+/* Button "Service my Bike" */
+.btn a{
+    position: relative;
+    top: 30px;
+    width: 30%;
+    height: 20%;
+    color: white;
+    background: #ff7200;
+    border-radius: 50px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+}

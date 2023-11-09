@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-style.css">
+    
+    <!-- Montserrat Alternates font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <!-- Dashboard icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Admin</title>
+</head>
+<body>
+   <!-- Side bar -->
+   <div class="home">
+      <div class="sidebar">
+        <!-- Logo -->
+         <div class="logo">
+                <p><span class="highlight">K</span>rish<span class="highlight">B</span>ik</p>
+         </div>
+         <!-- Dashboard -->
+         <div class="bar-list">
+            <ul class="nav-links">
+                <!-- Dashboard list -->
+                    <li><a href="admin-home-page.html"> <i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                    <li><a href="pending-page.html"> <i class='bx bx-list-ul' ></i>Pending</a></li>
+                    <li><a href="ready-page.html"><i class='bx bxs-truck' ></i> Ready</a></li>
+                    <li><a href="completed-page.html"><i class='bx bxs-truck' ></i> Completed</a></li>
+                    <li><a href="index.html"> <i class='bx bx-log-out' ></i> Log Out</a></li>
+            </ul>
+         </div>
+        </div>
+      </div>
+   
+</div>
+<!-- Body cards -->
+<div class="main-cards">
+    <!-- Pending -->
+    <div class="card">
+        <div class="card-inner">
+            <h2>Pending</h2>
+            <span class="material-symbols-outlined">
+                room_service
+                </span>
+                
+        </div>
+        <div id="pending-count"></div>
+    </div>
+    <!-- Ready -->
+    <div class="card">
+        <div class="card-inner">
+            <h2>Ready</h2>
+            <span class="material-symbols-outlined">
+                pending_actions
+                </span>
+        </div>
+        <div id="ready-count"></div>
+    </div>
+    <!-- Completed -->
+    <div class="card">
+        <div class="card-inner">
+            <h2>Completed</h2>
+            <span class="material-symbols-outlined">
+                done_all
+                </span>
+        </div>
+        <div id="completed-count"></div>
+    </div>
+  </div>
+
+<table id="ready-bookings-table">
+    <caption>Ready</caption>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Bike</th>
+            <th>Service</th>
+            <th>Date and Time</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="ready-bookings-list"></tbody>
+</table>
+</div>       
+
+
+<script>
+// Mark as pending
+async function markAsPending(id) {
+    try {
+        await fetch('/mark-as-pending', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id }) // Send the id instead of email
+        });
+        // Refresh the table after marking as Pending
+        fetchReadyBookings();
+        updateBookingCounts(); // Update counts as well
+    } catch (error) {
+        console.error('Error marking as pending:', error);
+    }
+}
+// Mark as completed
+async function markAsCompleted(id) {
+    try {
+        await fetch('/mark-as-completed', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id }) // Send the id instead of email
+        });
+        // Refresh the table after marking as Pending
+        fetchReadyBookings();
+        updateBookingCounts(); // Update counts as well
+    } catch (error) {
+        console.error('Error marking as completed:', error);
+    }
+}
+// Fetch ready bookings
+async function fetchReadyBookings() {
+    try {
+        const response = await fetch('/ready-bookings');
+        const data = await response.json();
+        const readyBookingsTable= document.getElementById('ready-bookings-list');
+
+        // Clear the table before adding new rows
+        readyBookingsTable.innerHTML = '';
+
+        data.readyBookings.forEach(booking => {
+            const row = readyBookingsTable.insertRow();
+            row.insertCell().textContent = booking.id;
+            row.insertCell().textContent = booking.email; 
+            row.insertCell().textContent = booking.bikes;
+            row.insertCell().textContent = booking.services;
+            row.insertCell().textContent = booking.dateandtime;
+            row.insertCell().textContent = booking.status;       
+              // Add buttons for marking the booking as Ready and Completed
+            const markPendingButton = document.createElement('button');
+            markPendingButton.textContent = 'Pending';
+            markPendingButton.addEventListener('click', () => markAsPending(booking.id));
+            const markCompletedButton = document.createElement('button');
+            markCompletedButton.textContent = 'Completed';
+            markCompletedButton.addEventListener('click', () => markAsCompleted(booking.id));
+
+            // Add cells for buttons in the row
+            const actionsCell = row.insertCell();
+            actionsCell.appendChild(markPendingButton);
+            actionsCell.appendChild(markCompletedButton);
+        });
+    } catch (error) {
+        console.error('Error fetching ready bookings:', error);
+    }
+}
+
+// Update booking counts
+async function updateBookingCounts() {
+    try {
+        const pendingResponse = await fetch('/pending-bookings');
+        const pendingData = await pendingResponse.json();
+        document.getElementById('pending-count').textContent = `${pendingData.pendingBookings.length}`;
+
+        const readyResponse = await fetch('/ready-bookings');
+        const readyData = await readyResponse.json();
+        document.getElementById('ready-count').textContent = `${readyData.readyBookings.length}`;
+
+        const completedResponse = await fetch('/completed-bookings');
+        const completedData = await completedResponse.json();
+        document.getElementById('completed-count').textContent = `${completedData.completedBookings.length}`;
+    } catch (error) {
+        console.error('Error updating booking counts:', error);
+    }
+}
+window.onload = function() {
+            updateBookingCounts();
+            fetchReadyBookings();
+        };
+</script>
+</body>
+</html>

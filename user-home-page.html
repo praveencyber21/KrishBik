@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="user-style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <!-- Header icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>User</title>
+</head>
+<body>
+    <!-- Body -->
+    <div class="home">
+        <header>
+            <!-- Navbar  -->
+            <div class="nav">
+                <!-- Logo -->
+                <div class="logo">
+                    <p><span class="highlight">K</span>rish<span class="highlight">B</span>ik</p>
+                </div>
+
+                <!-- Header menu list -->
+                <div class="menu">
+                    <ul>
+                        <!-- Home -->
+                        <li><a href="user-home-page.html">Home<span class="material-symbols-outlined">
+                            home</a></li>
+                        
+                            </span>
+                            <!-- Contact -->
+                        <li><a href="">Contact<span class="material-symbols-outlined">
+                            call
+                           </span></a></li>
+                            <!-- Logout -->
+                            <li><a href="index.html">Logout<span class="material-symbols-outlined">
+                                logout
+                                </span></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </header>
+        
+        <!-- Body content -->
+        <div class="main-content">
+            <!-- Title "This is awesome looking bike" -->
+            <div class="title">
+                <h1><span class="highlight">Th</span>is is<br>
+                    <span class="highlight">a</span>we<span class="highlight">s</span>ome<br>
+                    <span class="highlight">lo</span>oking 
+                    <span class="highlight">bi</span>ke</h1>
+            </div>
+            <!-- Qutoe -->
+            <div class="body-quote">
+                <p>We will take care of your bikes like  <br>
+                   there is no tomorrow and then some!</p>
+        </div>
+
+        <!-- Welcome note -->
+        
+            <div class="welcome">
+               <div class="welcome-text">
+                <h1>Welcome</h1> <br>
+                <h2>to our company</h2>
+                <h3></h3>
+               </div>
+                    
+                
+                <form action="/booking-page" method="POST">
+                     <!-- Button "Serive my bike" -->
+                <div class="btn">
+                    
+                    <a href="booking-page.html" class="btn" role="button">Service my Bike</a>
+                </div>
+                <div id="status-container">
+                    <!-- Status details will be displayed here -->
+                </div>
+            </div>
+            
+                </form>
+               
+           
+        
+        
+    
+    </div>
+    <!-- <script src="user-home-page.js"></script> -->
+    <script>
+        // async function userName(){
+        //     console.log("Name loaded")
+        //     try{
+        //         const response = await fetch('/login');
+        //         const data = await response.json();
+        //         const welcomeName = document.querySelector('.welcome-text h3');
+
+        //         welcomeName.innerHTML = `Welcome, ${data.name}!`;
+
+                
+
+        //     } catch (error){
+        //     console.error("Error fetching user name");
+        //     }
+        // }
+
+        // window.onload = userName;
+        async function getUserStatus() {
+    try {
+        const response = await fetch('/user-status');
+        const data = await response.json();
+
+        if (response.ok) {
+            // Assuming there's an element with id 'status-container' where status details will be displayed
+            const statusContainer = document.getElementById('status-container');
+            const welcomeName = document.querySelector('.welcome-text h3');
+            const statusDetails = data.userStatus;
+           
+            welcomeName.innerHTML = ` ${data.userName}!`;
+           
+            // Clear previous status details
+            statusContainer.innerHTML = '';
+            
+            // Update the UI with status details
+            statusDetails.forEach(status => {
+               
+                const statusElement = document.createElement('div');
+                statusElement.classList.add('status-item');
+                statusElement.innerHTML = `<p><strong>Id: </strong>${status.id}</p>
+                                           <p><strong>Bike: </strong>${status.bikes}</p>
+                                           <p><strong>Service: </strong>${status.services}</p>
+                                           <p><strong>Datatime: </strong>${status.dateandtime}</p>
+                                           <p><strong>Status: </strong>${status.status}</p>
+                                           `
+                statusContainer.appendChild(statusElement);
+               
+            });
+        } else {
+            console.error(data.error);
+            // Handle error scenarios on the frontend, e.g., display an error message to the user
+        }
+    } catch (error) {
+        console.error(error);
+        // Handle fetch error (network issues, etc.) on the frontend
+    }
+}
+
+// Call the function to get user's status details when the page loads or when needed
+getUserStatus();
+
+    </script>
+
+</body>
+</html>
